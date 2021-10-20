@@ -20,10 +20,10 @@ try:
 		time.sleep(rand(4,6))
 		if 'Cloudflare' in driver.page_source:
 			driver.delete_all_cookies()
-	        time.sleep(2)
-	        os.system(f"windscribe connect {loc[random.randrange(len(loc))]}")
-	        time.sleep(5)
-	        driver.get(url)
+			time.sleep(2)
+			os.system(f"windscribe connect {loc[random.randrange(len(loc))]}")
+			time.sleep(5)
+			driver.get(url)
 		try:
 			businessname = driver.find_element_by_xpath('//span[@itemprop="name"]').text
 		except:
@@ -62,7 +62,7 @@ try:
 			postalCode= None
 		data = {
 		'url':url,
-		'businessname':businessname
+		'businessname':businessname,
 		'name':name,
 		'title':title,
 		'phone':phone,
